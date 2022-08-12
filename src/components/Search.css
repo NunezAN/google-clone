@@ -44,3 +44,6 @@
     border: 1px solid #5f6368;
     
 }
+.btn-hidden{
+    display:none !important;
+}
