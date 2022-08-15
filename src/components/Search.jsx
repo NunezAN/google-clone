@@ -18,7 +18,7 @@ const Search = ({ hideButtons = false }) => {
     console.log(`Searching...${searchInput}`);
     dispatch({
         type: actionTypes.SET_SEARCH_TERM,
-        term: {searchInput},
+        term: searchInput,
     })
 
     navigate("/search");
