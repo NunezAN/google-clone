@@ -57,7 +57,7 @@ const Searchpage = () => {
                 <RoomIcon />
                 <Link to="/maps">Maps</Link>
               </div>
-              <div className="searchPage__option">
+              <div className="searchPage__option searchPage__option--more">
                 <MoreVertIcon />
                 <Link to="/more">More</Link>
               </div>
