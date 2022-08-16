@@ -74,17 +74,27 @@ const Searchpage = () => {
       </div>
       {term && (
         <div className="searchPage__results">
-          <p className="seachPage__resultsCount">
+          <p className="searchPage__resultsCount">
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime})
           </p>
           {data?.items.map((item) => (
             <div className="searchPage__result">
-              <a href={item.link}>{item.displayLink}</a>
-              <a href="item.link" className="searhPage__Result Title">
+              <a className="searchPage__result--link" href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 &&
+                  item.pagemap?.cse_image[0]?.src && (
+                    <img
+                      className="searchPage__result--img"
+                      src={item.pagemap?.cse_image[0]?.src}
+                      alt=""
+                    />
+                  )}
+                {item.displayLink}
+              </a>
+              <a href={item.link} className="searchPage__Result-title">
                 <h2>{item.title}</h2>
               </a>
-              <p className="searchPage_resultSnippet">{item.snippet}</p>
+              <p className="searchPage__resultSnippet">{item.snippet}</p>
             </div>
           ))}
         </div>
