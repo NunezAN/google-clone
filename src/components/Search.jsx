@@ -15,13 +15,14 @@ const Search = ({ hideButtons = false }) => {
 
   function search(event) {
     event.preventDefault();
-    console.log(`Searching...${searchInput}`);
-    dispatch({
+    if (searchInput) {
+      console.log(`Searching...${searchInput}`);
+      dispatch({
         type: actionTypes.SET_SEARCH_TERM,
         term: searchInput,
-    })
-
-    navigate("/search");
+      });
+      navigate("/search");
+    }
   }
   return (
     <form className="search">

@@ -9,7 +9,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import RoomIcon from "@mui/icons-material/Room";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+import NewspaperIcon from "@mui/icons-material/Newspaper";
 import "./SearchPage.css";
 
 const Searchpage = () => {
@@ -32,7 +32,6 @@ const Searchpage = () => {
             alt=""
           />
         </Link>
-        <h1>{term}</h1>
         <div className="searchPage__header--body">
           <Search hideButtons></Search>
           <div className="searchPage__options">
@@ -73,7 +72,23 @@ const Searchpage = () => {
           </div>
         </div>
       </div>
-      <div className="searhPage__results"></div>
+      {term && (
+        <div className="searchPage__results">
+          <p className="seachPage__resultsCount">
+            About {data?.searchInformation.formattedTotalResults} results (
+            {data?.searchInformation.formattedSearchTime})
+          </p>
+          {data?.items.map((item) => (
+            <div className="searchPage__result">
+              <a href={item.link}>{item.displayLink}</a>
+              <a href="item.link" className="searhPage__Result Title">
+                <h2>{item.title}</h2>
+              </a>
+              <p className="searchPage_resultSnippet">{item.snippet}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

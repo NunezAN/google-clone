@@ -42,3 +42,6 @@
     margin-left: 5px;
     cursor: not-allowed ;
 }
+.searchPage__results{
+    color: white;
+}
