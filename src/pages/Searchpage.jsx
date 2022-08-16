@@ -11,14 +11,15 @@ import RoomIcon from "@mui/icons-material/Room";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import "./SearchPage.css";
+import SearchResult from "../components/SearchResult";
 
 const Searchpage = () => {
   const [{ term }, dispatch] = useStateValue();
   //live api call
-  // const {data} = UseGoogleSearch(term);
+  const { data } = UseGoogleSearch(term);
 
   //mock api call
-  const data = response;
+  //   const data = response;
 
   console.log(data);
 
@@ -78,24 +79,8 @@ const Searchpage = () => {
             About {data?.searchInformation.formattedTotalResults} results (
             {data?.searchInformation.formattedSearchTime})
           </p>
-          {data?.items.map((item) => (
-            <div className="searchPage__result">
-              <a className="searchPage__result--link" href={item.link}>
-                {item.pagemap?.cse_image?.length > 0 &&
-                  item.pagemap?.cse_image[0]?.src && (
-                    <img
-                      className="searchPage__result--img"
-                      src={item.pagemap?.cse_image[0]?.src}
-                      alt=""
-                    />
-                  )}
-                {item.displayLink}
-              </a>
-              <a href={item.link} className="searchPage__Result-title">
-                <h2>{item.title}</h2>
-              </a>
-              <p className="searchPage__resultSnippet">{item.snippet}</p>
-            </div>
+          {data?.items.map((item, i) => (
+            <SearchResult item={item} key={i} />
           ))}
         </div>
       )}

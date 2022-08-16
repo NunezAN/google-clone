@@ -1,0 +1,35 @@
+.searchPage__result{
+    margin: 40px 0;
+}
+.searchPage__result--link{
+    text-decoration: none;
+    color: #bdc1c6;
+}
+.searchPage__resultsCount{
+    color: #969ba1;
+    font-size: 14px;
+}
+.searchPage__Result-title{
+    text-decoration: none;
+}
+.searchPage__Result-title:hover{
+    text-decoration: underline;
+}
+.searchPage__Result-title > h2{
+    font-weight: 500;
+}
+.searchPage__resultSnippet{
+    margin-top:10px;
+}
+.searchPage__result--img{
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.searchPage__result--link, .searchPage__Result-title{
+    color:#8ab4f8;
+}
+.searchPage__result--link:visited, .searchPage__Result-title:visited{
+    color:#c58af9;
+}
