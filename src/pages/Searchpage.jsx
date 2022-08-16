@@ -38,27 +38,27 @@ const Searchpage = () => {
           <div className="searchPage__options">
             <div className="searchPage__options--left">
               <div className="searchPage__option">
-                <SearchIcon className="icon"/>
+                <SearchIcon className/>
                 <Link to="/all">All</Link>
               </div>
               <div className="searchPage__option">
-                <NewspaperIcon className="icon"/>
+                <NewspaperIcon />
                 <Link to="/news">News</Link>
               </div>
               <div className="searchPage__option">
-                <LocalOfferIcon className="icon"/>
+                <LocalOfferIcon />
                 <Link to="/shopping">Shopping</Link>
               </div>
               <div className="searchPage__option">
-                <ImageIcon className="icon"/>
+                <ImageIcon />
                 <Link to="/images">Images</Link>
               </div>
               <div className="searchPage__option">
-                <RoomIcon className="icon"/>
+                <RoomIcon />
                 <Link to="/maps">Maps</Link>
               </div>
               <div className="searchPage__option searchPage__option--more">
-                <MoreVertIcon className="icon"/>
+                <MoreVertIcon />
                 <Link to="/more">More</Link>
               </div>
             </div>
