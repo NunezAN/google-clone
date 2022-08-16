@@ -71,12 +71,15 @@
 }
 @media (max-width: 550px) {
     .searchPage__options{
-        max-width: 450px;
+        max-width: 380px;
     }
     .searchPage__option--more{
         display: none;
     }
     .searchPage__results{
-        max-width: 450px;
+        max-width: 380px;
+    }
+    .searchPage__options a,.searchPage__options--right a{
+        font-size: 8px;
     }
 }
