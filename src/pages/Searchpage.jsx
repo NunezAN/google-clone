@@ -38,36 +38,58 @@ const Searchpage = () => {
           <div className="searchPage__options">
             <div className="searchPage__options--left">
               <div className="searchPage__option">
-                <SearchIcon className/>
-                <Link to="/all">All</Link>
+                <SearchIcon className />
+                <Link to="/all" onClick={(event) => event.preventDefault()}>
+                  All
+                </Link>
               </div>
               <div className="searchPage__option">
                 <NewspaperIcon />
-                <Link to="/news">News</Link>
+                <Link to="/news" onClick={(event) => event.preventDefault()}>
+                  News
+                </Link>
               </div>
               <div className="searchPage__option">
                 <LocalOfferIcon />
-                <Link to="/shopping">Shopping</Link>
+                <Link
+                  to="/shopping"
+                  onClick={(event) => event.preventDefault()}
+                >
+                  Shopping
+                </Link>
               </div>
               <div className="searchPage__option">
                 <ImageIcon />
-                <Link to="/images">Images</Link>
+                <Link to="/images" onClick={(event) => event.preventDefault()}>
+                  Images
+                </Link>
               </div>
               <div className="searchPage__option">
                 <RoomIcon />
-                <Link to="/maps">Maps</Link>
+                <Link to="/maps" onClick={(event) => event.preventDefault()}>
+                  Maps
+                </Link>
               </div>
               <div className="searchPage__option searchPage__option--more">
                 <MoreVertIcon />
-                <Link to="/more">More</Link>
+                <Link to="/more" onClick={(event) => event.preventDefault()}>
+                  More
+                </Link>
               </div>
             </div>
             <div className="searchPage__options--right">
               <div className="searchPage__option">
-                <Link to="/settings">Settings</Link>
+                <Link
+                  to="/settings"
+                  onClick={(event) => event.preventDefault()}
+                >
+                  Settings
+                </Link>
               </div>
               <div className="searchPage__option">
-                <Link to="/tools">Tools</Link>
+                <Link to="/tools" onClick={(event) => event.preventDefault()}>
+                  Tools
+                </Link>
               </div>
             </div>
           </div>

@@ -3,19 +3,37 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import { Avatar } from "@mui/material";
-import Search from "../components/Search.jsx"
+import Search from "../components/Search.jsx";
 
 const Home = () => {
   return (
     <div className="home">
       <div className="home__header">
         <div className="home__header--left">
-          <Link to="/about">About</Link>
-          <Link to="/store">Store</Link>
+          <Link
+            to="/about"
+            className="disabledLink"
+            onClick={(event) => event.preventDefault()}
+          >
+            About
+          </Link>
+          <Link
+            to="/store"
+            className="disabledLink"
+            onClick={(event) => event.preventDefault()}
+          >
+            Store
+          </Link>
         </div>
         <div className="home__header--right">
           <Link to="/gmail">Gmail</Link>
-          <Link to="/Images">Images</Link>
+          <Link
+            to="/Images"
+            className="disabledLink"
+            onClick={(event) => event.preventDefault()}
+          >
+            Images
+          </Link>
           <AppsIcon className="icon icon-apps" />
           <Avatar
             sx={{ bgcolor: "#202124" }}
@@ -30,7 +48,7 @@ const Home = () => {
           alt=""
         />
         <div className="home__input--container">
-            <Search/>
+          <Search />
         </div>
       </div>
     </div>
