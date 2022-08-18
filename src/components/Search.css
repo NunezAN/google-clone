@@ -21,6 +21,7 @@
 }
 .search__input--field:focus{
     outline-width: 0;
+    outline:none;
 }
 .search__input--icon, .mic--icon{
     color:#9aa0a6;
