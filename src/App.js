@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Searchpage from "./pages/Searchpage";
-import Search from "./components/Search";
 import Gmail from "./pages/Gmail";
 
 function App() {

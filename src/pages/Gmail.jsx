@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Gmail.css";
 
 const Gmail = () => {
     return (
