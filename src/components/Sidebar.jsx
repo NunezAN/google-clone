@@ -34,9 +34,6 @@ const Sidebar = () => {
       <SidebarOption Icon={InsertDriveFileIcon} title="Drafts" number={54} />
       <SidebarOption Icon={LabelIcon} title="Categories" number={54} />
       <SidebarOption Icon={ExpandMoreIcon} title="More" number={54} />
-      <div className="sidebar__footer">
-        <div className="sidebar__footerIcons"></div>
-      </div>
     </div>
   );
 };

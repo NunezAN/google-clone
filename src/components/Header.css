@@ -13,11 +13,13 @@
 .header__left{
     display:flex;
     align-items: center;
+    width: 25%;
+    max-width: 256px;
 }
 .header__middle{
     display: flex;
     align-items: center;
-    flex: 0.7;
+    flex: 1;
     background-color: rgba(241,243,244,.24);
     padding: 5px 10px;
     border-radius: 8px;

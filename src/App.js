@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="/search" element={<Searchpage/>} />
-        <Route path="/gmail" element ={<Gmail/>}/>
+        <Route path="/gmail/*" element ={<Gmail/>}/>
       </Routes>
     </div>
   );

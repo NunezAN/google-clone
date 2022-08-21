@@ -1,3 +1,8 @@
-h1{
-    color:white;
+.gmail{
+    height: 100vh;
+    overflow: hidden;
+}
+.gmail__body{
+    display: flex;
+    height:100vh;
 }
