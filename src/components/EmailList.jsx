@@ -69,16 +69,108 @@ const EmailList = () => {
           description="this is dank"
           time="10:00pm"
         />
-      </div>
-      <div className="emailList__list">
         <EmailRow
           title="Twitch"
           subject="Hello Bozo"
           description="this is dank"
           time="10:00pm"
         />
-      </div>
-      <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
         <EmailRow
           title="Twitch"
           subject="Hello Bozo"
