@@ -3,6 +3,7 @@ import { Routes,Route } from "react-router-dom";
 import EmailList from "../components/EmailList";
 import Header from "../components/Header";
 import Mail from "../components/Mail";
+import SendMail from "../components/SendMail";
 import Sidebar from "../components/Sidebar";
 import "./Gmail.css";
 
@@ -17,6 +18,7 @@ const Gmail = () => {
             <Route path="/mail" element={<Mail/>} />
         </Routes>
       </div>
+      <SendMail/>
     </div>
   );
 };
