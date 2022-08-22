@@ -1,0 +1,60 @@
+.emailRow{
+    cursor: pointer;
+    border-bottom: 1px solid #696969;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    z-index:999
+}
+.emailRow:hover{
+    border-bottom: 1px solid #696969;
+    box-shadow: 0px 2px 4px -3px white, 0px -2px 4px -3px white;
+}
+.emailRow__options{
+    display: flex;
+}
+.emailRow__message{
+    display: flex;
+    flex: .8;
+    align-items: center;
+    font-size: 13px;
+    color: white;
+}
+.emailRow__message>h4{
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.emailRow__options > .MuiCheckbox-colorPrimary.Mui-checked {
+    color: rgba(255,255,255,0.87) !important;
+}
+.emailRow__options > .MuiCheckbox-colorPrimary {
+  color: #696969 !important;
+}
+.emailRow--icon{
+    color: #696969;
+}
+.emailRow:hover .emailRow--icon{
+    color: white;
+}
+.emailRow:hover .emailRow__options > .MuiCheckbox-colorPrimary{
+    color: white !important;
+}
+.emailRow__title{
+    font-size: 14px;
+    flex: 0.3;
+    color: white;
+}
+.emailRow__time{
+    padding-right: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+.emailRow__description{
+    font-weight: 400;
+    color: rgba(255,255,255,.5);
+}

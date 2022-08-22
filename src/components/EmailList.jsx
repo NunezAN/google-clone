@@ -11,6 +11,7 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import { Checkbox, IconButton } from "@mui/material";
 import "./EmailList.css";
 import Section from "./Section";
+import EmailRow from "./EmailRow";
 
 const EmailList = () => {
   return (
@@ -62,7 +63,28 @@ const EmailList = () => {
         ></Section>
       </div>
       <div className="emailList__list">
-        
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+      </div>
+      <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
+      </div>
+      <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hello Bozo"
+          description="this is dank"
+          time="10:00pm"
+        />
       </div>
     </div>
   );
