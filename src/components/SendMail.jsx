@@ -5,18 +5,50 @@ import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 const SendMail = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+  };
   return (
     <div className="sendMail">
       <div className="sendMail__header">
         <h3 className="sendMail__header--title">New Message</h3>
         <CloseIcon className="sendMail__close" />
       </div>
-      <form action="">
-        <input placeholder="To" type="text" />
-        <input placeholder="Subject" type="text" />
-        <input placeholder="Message..." type="text" className="sendMail__message--input"/>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          placeholder="To"
+          type="text"
+          {...register("to", { required: true })}
+        />
+        {errors.to && <p className="sendMail__error">To is Required</p>}
+        <input
+          placeholder="Subject"
+          type="text"
+          {...register("subject", { required: true })}
+        />
+        {errors.subject && (
+          <p className="sendMail__error">Subject is Required</p>
+        )}
+        <textarea
+          placeholder="Message..."
+          type="text"
+          className="sendMail__message--input"
+          {...register("message", { required: true })}
+        />
+        {errors.message && (
+          <p className="sendMail__error">Message is Required</p>
+        )}
         <div className="sendMail__options">
-          <Button className="sendMail__send">Send</Button>
+          <Button variant="contained" type="submit" className="sendMail__send">
+            Send
+          </Button>
         </div>
       </form>
     </div>

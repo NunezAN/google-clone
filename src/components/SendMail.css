@@ -53,4 +53,21 @@
 }
 .sendMail__message--input{
     flex: 1;
+    padding: 10px;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.sendMail__message--input:focus{
+    border: none;
+}
+.sendMail__error{
+    background-color: white;
+    color: red;
+    text-align: right;
+    padding: 2px;
 }
