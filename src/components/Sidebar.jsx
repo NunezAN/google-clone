@@ -11,13 +11,17 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import LabelIcon from "@mui/icons-material/Label";
 import SidebarOption from "./SidebarOption";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../features/mailSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   return (
     <div className="sidebar">
       <Button
         startIcon={<CreateIcon fontSize="large" />}
         className="sidebar__compose"
+        onClick={()=> dispatch(openSendMessage())}
       >
         Compose
       </Button>

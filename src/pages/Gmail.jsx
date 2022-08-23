@@ -6,8 +6,11 @@ import Mail from "../components/Mail";
 import SendMail from "../components/SendMail";
 import Sidebar from "../components/Sidebar";
 import "./Gmail.css";
+import {useSelector} from "react-redux";
+import { selectSendMessageIsOpen } from "../features/mailSlice";
 
 const Gmail = () => {
+  const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
   return (
     <div className="gmail">
       <Header />
@@ -18,7 +21,7 @@ const Gmail = () => {
             <Route path="/mail" element={<Mail/>} />
         </Routes>
       </div>
-      <SendMail/>
+      {sendMessageIsOpen && <SendMail/>}
     </div>
   );
 };
