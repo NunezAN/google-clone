@@ -17,9 +17,12 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LabelImportantOutlinedIcon from '@mui/icons-material/LabelImportantOutlined';
 import { useNavigate } from "react-router-dom";
 import "./Mail.css";
+import { useSelector } from "react-redux";
+import { selectOpenMail } from "../features/mailSlice";
 
 const Mail = () => {
   const navigate = useNavigate();
+  const selectedMail = useSelector(selectOpenMail);
 
   return (
     <div className="mail">
@@ -74,12 +77,12 @@ const Mail = () => {
       <div className="mail__body--container">
         <div className="mail__body">
           <div className="mail__body--header">
-            <h2>Subject</h2>
+            <h2>{selectedMail?.subject}</h2>
             <LabelImportantOutlinedIcon className="mail__important" />
-            <p>Title</p>
-            <p className="mail__time">10pm</p>
+            <p>{selectedMail?.title}</p>
+            <p className="mail__time">{selectedMail?.time}</p>
           </div>
-          <div className="mail__message">This is a message</div>
+          <div className="mail__message">{selectedMail?.description}</div>
         </div>
       </div>
     </div>
