@@ -11,11 +11,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import LabelIcon from "@mui/icons-material/Label";
 import SidebarOption from "./SidebarOption";
-import { useDispatch } from "react-redux";
-import { openSendMessage } from "../features/mailSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { openSendMessage, selectEmailCount } from "../features/mailSlice";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
+  const emailCount = useSelector(selectEmailCount);
   return (
     <div className="sidebar">
       <Button
@@ -28,16 +29,16 @@ const Sidebar = () => {
       <SidebarOption
         Icon={InboxIcon}
         title="Inbox"
-        number={54}
+        number={emailCount}
         selected={true}
       />
-      <SidebarOption Icon={StarIcon} title="Starred" number={54} />
-      <SidebarOption Icon={AccessTimeIcon} title="Snoozed" number={54} />
-      <SidebarOption Icon={LabelImportantIcon} title="Important" number={54} />
-      <SidebarOption Icon={SendIcon} title="Sent" number={54} />
-      <SidebarOption Icon={InsertDriveFileIcon} title="Drafts" number={54} />
-      <SidebarOption Icon={LabelIcon} title="Categories" number={54} />
-      <SidebarOption Icon={ExpandMoreIcon} title="More" number={54} />
+      <SidebarOption Icon={StarIcon} title="Starred" number={13} />
+      <SidebarOption Icon={AccessTimeIcon} title="Snoozed" number={3} />
+      <SidebarOption Icon={LabelImportantIcon} title="Important" number={10} />
+      <SidebarOption Icon={SendIcon} title="Sent" number={2} />
+      <SidebarOption Icon={InsertDriveFileIcon} title="Drafts" number={0} />
+      <SidebarOption Icon={LabelIcon} title="Categories" number={1} />
+      <SidebarOption Icon={ExpandMoreIcon} title="More" number={1} />
     </div>
   );
 };

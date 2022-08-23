@@ -20,17 +20,22 @@ import {
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
+import { useDispatch } from "react-redux";
+import { setEmailCount } from "../features/mailSlice";
 
 const EmailList = () => {
   const [emails, setEmails] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const q = query(collection(db, "emails"), orderBy("timestamp","desc"));
-    onSnapshot(q, (snapshot) =>
+    const q = query(collection(db, "emails"), orderBy("timestamp", "desc"));
+
+    onSnapshot(q, (snapshot) => {
+      dispatch(setEmailCount(snapshot.docs.length));
       setEmails(
         snapshot.docs.map((elem) => ({ id: elem.id, data: elem.data() }))
-      )
-    );
+      );
+    });
   }, []);
 
   return (

@@ -18,7 +18,6 @@ const SendMail = () => {
   const dispatch = useDispatch();
 
   async function onSubmit(formData) {
-    console.log(formData);
     const timestamp = new Date();
 
     const post = {
