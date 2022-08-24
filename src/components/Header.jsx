@@ -7,8 +7,21 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
 import { Avatar, IconButton } from "@mui/material";
 import "./Header.css";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../features/userSlice";
+import { authfb } from "../firebase";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  const logOut= () => {
+    signOut(authfb).then(()=>{
+      dispatch(logout());
+    });
+  }
+
   return (
     <div className="header">
       <div className="header__left">
@@ -35,7 +48,7 @@ const Header = () => {
         <IconButton className="icon-button">
           <AppsIcon className="icon" />
         </IconButton>
-        <Avatar className="avatar"/>
+        <Avatar onClick={logOut} className="avatar">{user?.displayName.slice(0,1).toUpperCase()}</Avatar>
       </div>
     </div>
   );
