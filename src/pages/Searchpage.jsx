@@ -20,7 +20,6 @@ const Searchpage = () => {
   //mock api call
   //   const data = response;
 
-  console.log(data);
 
   return (
     <div className="searchPage">

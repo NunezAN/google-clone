@@ -21,7 +21,6 @@ const Gmail = () => {
   useEffect(() => {
     onAuthStateChanged(authfb, (user) => {
       if (user) {
-        console.log(user);
         dispatch(
           login({
             displayName: user.displayName,
